@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js DOM sumary</title>
+
+</head>
+<body>
+    <h1> fainal dom devent handlers</h1>
+     <input id="input-fild" type="text">
+     <button id ="btn-update">update</button>
+     <p id = "input-text-display">pp</p>
+    <br>
+    <br>
+    <h3 id="handler-status"> defult text</h3>
+
+    <button onclick="handleOnClick()">handle event add onclick function</button>
+    <button id ="event-lisiner">handle event by eventLisener</button>
+    
+    <script>
+        function handleOnClick(){
+            
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText="affter click buton text change the text";
+        }
+
+        document.getElementById('event-lisiner').addEventListener('click',function (){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText ='text chanhe affter click event handler button';
+        })
+
+        // option 2 recap
+        document.getElementById('btn-update').addEventListener('click',function (){
+            const inputFild =document.getElementById("input-fild");
+            const InputText = inputFild.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText =InputText;
+            inputFild.value='';
+        })
+    </script>
+</body>
+</html>

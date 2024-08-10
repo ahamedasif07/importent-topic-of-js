@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> please add your comment</h1>
+
+    <div id="p-cotainer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus ipsum eaque illo repellendus maiores quia, animi voluptates minima pariatur numquam ea officia tenetur aspernatur ipsa temporibus facere eos et!</p>
+        <p>Iusto vitae quos, exercitationem aliquam voluptate a at, sequi esse quas ducimus hic reprehenderit quisquam corrupti facere adipisci fugiat ipsam doloremque iste cum maiores unde inventore laudantium mollitia nemo. Enim.</p>
+        <p>Iusto tempore quasi, quos, blanditiis dolor, aperiam consequatur odit alias ut explicabo delectus animi rem autem quo aspernatur hic suscipit officiis nisi earum maiores? Tenetur deleniti quae ab rem vero?</p>
+    </div>
+
+
+    <div>
+        <textarea name="" id="new-area" cols="60" rows="5"></textarea>
+        <button id="btn-post">post</button>
+    </div>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click',function(){
+         
+            const textArea = document.getElementById('new-area')
+
+            const textAreaValue = textArea.value;
+            
+            const creatP = document.createElement('p')
+
+            creatP.innerText =  textAreaValue;
+
+           const pContainer = document.getElementById('p-cotainer')
+           pContainer.appendChild(creatP)
+
+           textArea.value='';
+
+
+        })
+    </script>
+</body>
+</html>

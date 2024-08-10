@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour - of - dom</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        li{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> wellcome to my dom</h1>
+    </header>
+    <main>
+        <h1> my awesom dom </h1>
+       <section class="singer-container">
+        <ul>
+            <li>jalali</li>
+            <li>kalali</li>
+            <li>bandobi</li>
+        </ul>
+       </section>
+        <ul>
+            <h1 id="fruts-title"> fruts i like </h1>
+            <li class="fruts">apple </li>
+            <li class="fruts">orange</li>
+            <li class="fruts">banana</li>
+        </ul>
+    </main>
+    
+    <script src="/js/dom.js"></script>
+    <script>
+        // const liCollection = document.getElementsByTagName('li')
+        // // console.log(liCollection)
+        // for(const li of liCollection){
+        //     console.log(li.innerText)
+        // }
+        // const allH1 = document.getElementsByTagName('h1')
+        // for(const h1 of allH1){
+        //     console.log(h1.innerText)
+        // }
+
+        // const frutsTitle = document.getElementById('fruts-title')
+        // console.log(frutsTitle.innerText)
+        // const fruts =  document.getElementsByClassName('fruts')
+        // for(const frut of fruts){
+        //     console.log(frut.innerText)
+        // }
+
+
+        // quary selector all
+        const singer = document.querySelectorAll('.singer-container')
+        // console.log(singer)
+        for( const li of singer){
+            console.log(li.innerText)
+        }
+    </script>
+</body>
+</html>
